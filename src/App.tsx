@@ -17,6 +17,10 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       textAlign: 'center'
     },
+    image: {
+      width: '80px',
+      height: '80px',
+    },
     paper: {
       padding: theme.spacing(1),
       height: '100px',

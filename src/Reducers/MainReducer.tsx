@@ -7,7 +7,7 @@ export function Reducer(state = initialState, action: any) {
     switch (action.type) {
         case "ADD_USERS":
             return {
-                users: [...action.payload],
+                users: [...state.users, ...action.payload],
             };
         case "DELETE_USER":
             return {

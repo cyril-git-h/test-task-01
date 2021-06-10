@@ -13,3 +13,19 @@ export function getUsers() {
             .catch(err => reject(err));
     });
 };
+
+export function postUser(data:any) {
+    return new Promise((resolve, reject) => {
+        instance.post('/users', data)
+            .then(res => resolve(res))
+            .catch(err => reject(err));
+    });
+};
+
+export function deleteUser(id:any) {
+    return new Promise((resolve, reject) => {
+        instance.delete(`/users/${id}`)
+            .then(res => resolve(res))
+            .catch(err => reject(err));
+    });
+};
